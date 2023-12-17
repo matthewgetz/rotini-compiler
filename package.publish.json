@@ -1,7 +1,7 @@
 {
   "name": "@rotini/compiler",
   "description": "rotini cli framework compiler",
-  "version": "3.1.5",
+  "version": "4.0.0",
   "license": "MIT",
   "author": "Matt Getz <matthewcgetz@gmail.com>",
   "main": "./build/index.js",
@@ -10,10 +10,7 @@
   "bugs": "https://github.com/matthewgetz/rotini-compiler/issues",
   "homepage": "https://rotini.dev",
   "engines": {
-    "node": ">=18"
-  },
-  "bin": {
-    "rotini": "./build/index.js"
+    "node": ">=20"
   },
   "exports": {
     ".": {
@@ -32,8 +29,5 @@
     "rotini",
     "cli",
     "framework"
-  ],
-  "dependencies": {
-    "rotini": "3.1.5"
-  }
+  ]
 }
