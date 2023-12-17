@@ -1,0 +1,23 @@
+{
+  "name": "@rotini/compiler",
+  "version": "3.1.5",
+  "scripts": {
+    "all": "yarn run deps && yarn run lint && yarn run test:coverage && yarn run compile && yarn run build",
+    "build": "tsup --config ./node_modules/@rotini/configs/bsd.tsup.config.ts",
+    "build:watch": "yarn run build --watch",
+    "compile": "tsc",
+    "compile:watch": "yarn run compile --watch",
+    "deps": "yarn run deps:dev",
+    "deps:dev": "ncu --dep dev -e 2",
+    "lint": "eslint src --config ./node_modules/@rotini/configs/.eslintrc.js --no-inline-config --max-warnings 0",
+    "test": "vitest --config ./node_modules/@rotini/configs/vitest.config.ts",
+    "test:coverage": "yarn run test --coverage",
+    "test:watch": "yarn run test --coverage --watch"
+  },
+  "devDependencies": {
+    "@rotini/configs": "^4.0.0"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/@rotini/configs/.eslintrc.js"
+  }
+}
